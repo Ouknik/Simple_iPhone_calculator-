@@ -39,67 +39,69 @@ class _Calculator extends State<Calculator> {
         ),
       ),
       backgroundColor: Colors.black,
-      body: Container(
-        margin: EdgeInsets.only(bottom: 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Row(
-              children: [
-                Expanded(
-                    child: Text(
-                  text,
-                  style: TextStyle(color: Colors.white, fontSize: 60),
-                  maxLines: 1,
-                  textAlign: TextAlign.right,
-                ))
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                button("C", Color(0xffa5a5a5), 0),
-                button("+/-", Color.fromRGBO(165, 165, 165, 1), 0),
-                button("%", Color(0xffa5a5a5), 0),
-                button("/", Color(0xffff9800), 0),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                button("7", Color(0xff323232), 0),
-                button("8", Color(0xff323232), 0),
-                button("9", Color(0xff323232), 0),
-                button("X", Color(0xffff9800), 0),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                button("4", Color(0xff323232), 0),
-                button("5", Color(0xff323232), 0),
-                button("6", Color(0xff323232), 0),
-                button("-", Color(0xffff9800), 0),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                button("1", Color(0xff323232), 0),
-                button("2", Color(0xff323232), 0),
-                button("3", Color(0xff323232), 0),
-                button("+", Color(0xffff9800), 0),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                button("0", Color(0xff323232), 100),
-                button(".", Color(0xff323232), 0),
-                button("=", Color(0xffff9800), 0),
-              ],
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                      child: Text(
+                    text,
+                    style: TextStyle(color: Colors.white, fontSize: 60),
+                    maxLines: 1,
+                    textAlign: TextAlign.right,
+                  ))
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  button("C", Color(0xffa5a5a5), 0),
+                  button("+/-", Color.fromRGBO(165, 165, 165, 1), 0),
+                  button("%", Color(0xffa5a5a5), 0),
+                  button("/", Color(0xffff9800), 0),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  button("7", Color(0xff323232), 0),
+                  button("8", Color(0xff323232), 0),
+                  button("9", Color(0xff323232), 0),
+                  button("X", Color(0xffff9800), 0),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  button("4", Color(0xff323232), 0),
+                  button("5", Color(0xff323232), 0),
+                  button("6", Color(0xff323232), 0),
+                  button("-", Color(0xffff9800), 0),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  button("1", Color(0xff323232), 0),
+                  button("2", Color(0xff323232), 0),
+                  button("3", Color(0xff323232), 0),
+                  button("+", Color(0xffff9800), 0),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  button("0", Color(0xff323232), 100),
+                  button(".", Color(0xff323232), 0),
+                  button("=", Color(0xffff9800), 0),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
